@@ -26,7 +26,7 @@ import Zaif.ZaifData;
 
 /**
  *
- * @author shimadatakaya
+ * 
  * 
  * 
  * Zaifで、それぞれの重さをエクセルに出力するクラス
