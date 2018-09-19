@@ -28,13 +28,11 @@ public class ZaifJPY implements ZaifEx{
 		
 		lp = new PublicApi(CurrencyPair.MONAJPY);
 		r1 = lp.ticker().ask;
-		r1 *= 1.001;
-		data.setJPYPrice("MONA", (1/r1));
+		data.setJPYPrice("MONA", (1/r1)*0.999);
 		
 		lp = new PublicApi(CurrencyPair.XEMJPY);
 		r1 = lp.ticker().ask;
-		r1 *= 1.001;
-		data.setJPYPrice("XEM", (1/r1));
+		data.setJPYPrice("XEM", (1/r1)*0.999);
 		
 		//エラー発生時は0を格納
 		}catch(Exception e){

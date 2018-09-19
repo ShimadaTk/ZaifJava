@@ -29,14 +29,12 @@ public class ZaifBTC implements ZaifEx{
 		lp = new PublicApi(CurrencyPair.MONABTC);
 		r1 = lp.ticker().ask;
 //		System.out.println("BTC/MONA："+(1/r1));
-		r1 *= 1.001;
-		data.setBTCPrice("MONA", (1/r1));
+		data.setBTCPrice("MONA", (1/r1)*0.999);
 
 		lp = new PublicApi(CurrencyPair.XEMBTC);
 		r1 = lp.ticker().ask;
-		r1 *= 1.001;
 //		System.out.println("BTC/XEM："+(1/r1));
-		data.setBTCPrice("XEM", (1/r1));
+		data.setBTCPrice("XEM", (1/r1)*0.999);
 		
 		//エラー発生時は0を格納
 		}catch(Exception e){
@@ -44,8 +42,7 @@ public class ZaifBTC implements ZaifEx{
 			data.setBTCPrice("JPY", 0.0);
 			data.setBTCPrice("MONA", 0.0);
 			data.setBTCPrice("XEM", 0.0);
-		}
-		
+		}		
 		return;
 	}
 	
