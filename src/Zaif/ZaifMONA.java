@@ -25,11 +25,11 @@ public class ZaifMONA implements ZaifEx{
 		try{
 		PublicApi lp = new PublicApi(CurrencyPair.MONAJPY);
 		double r1 = lp.ticker().bid;
-		data.setMONAPrice("JPY", r1);
+		data.setMONAPrice("JPY", r1*0.999);
 		
 		lp = new PublicApi(CurrencyPair.MONABTC);
 		r1 = lp.ticker().bid;
-		data.setMONAPrice("BTC", r1);
+		data.setMONAPrice("BTC", r1*0.999);
 		
 		//エラー発生時は0を格納
 		}catch(Exception e){

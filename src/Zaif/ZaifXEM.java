@@ -24,11 +24,12 @@ public class ZaifXEM implements ZaifEx{
 		try{
 		PublicApi lp = new PublicApi(CurrencyPair.XEMJPY);
 		double r1 = lp.ticker().bid;
-		data.setXEMPrice("JPY", r1);
+		data.setXEMPrice("JPY", r1*0.999);
+//		System.out.println("XEM→JPY："+r1*0.999);
 		
 		lp = new PublicApi(CurrencyPair.XEMBTC);
 		r1 = lp.ticker().bid;
-		data.setXEMPrice("BTC", r1);}
+		data.setXEMPrice("BTC", r1*0.999);}
 		
 		//エラー発生時は0を格納
 		catch(Exception e){

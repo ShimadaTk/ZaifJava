@@ -24,7 +24,7 @@ public class ZaifJPY implements ZaifEx{
 		try{
 		PublicApi lp = new PublicApi(CurrencyPair.BTCJPY);
 		double r1 = lp.ticker().ask;
-		data.setJPYPrice("BTC", (1/r1));
+		data.setJPYPrice("BTC", (1/r1)*0.999);
 		
 		lp = new PublicApi(CurrencyPair.MONAJPY);
 		r1 = lp.ticker().ask;
